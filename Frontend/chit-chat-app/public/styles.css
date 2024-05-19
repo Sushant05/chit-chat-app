@@ -1,0 +1,83 @@
+.bodyStyle {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input {
+  background-color: white;
+  color : #FFBD59;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 0 10px;
+  width: 300px;
+  padding: 10px 0;
+  box-shadow: 0 0 5px #4a361f;
+  transition: 0.4s;
+} 
+
+label{
+  margin-left: 10px;
+}
+
+.navbar {
+  background-color : #FFBD59;
+  color: #fff; 
+  padding: 10px 20px; 
+  display: flex; 
+  align-items: center; 
+  width: 100%;
+  height: 10%;
+  font-weight: bold;
+  font-size: 40px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.navbar img {
+  height: 100%; 
+  margin-right: 10px;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.bottom-bar input[type="text"] {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 80%;
+}
+
+input {
+  padding: 5px;
+}
+  
+.danger-text {
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+  text-align: center;
+  width: 300px;
+}
+
