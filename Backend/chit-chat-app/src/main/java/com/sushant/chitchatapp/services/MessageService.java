@@ -9,7 +9,8 @@ import com.sushant.chitchatapp.models.MessageData;
 @Service
 public interface MessageService {
     
-    public String addMessage(String message, String email);
+    public String addMessage(MessageData messageData);
     public List<MessageData> getMessages();
+    public List<MessageData> fetchMessages();
 
 }

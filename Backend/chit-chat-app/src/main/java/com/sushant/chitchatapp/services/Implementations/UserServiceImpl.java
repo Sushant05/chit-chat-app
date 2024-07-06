@@ -1,6 +1,5 @@
 package com.sushant.chitchatapp.services.Implementations;
 
-import java.util.LinkedHashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Service;
 import com.sushant.chitchatapp.models.JwtRequest;
 import com.sushant.chitchatapp.models.JwtResponse;
 import com.sushant.chitchatapp.models.User;
-import com.sushant.chitchatapp.models.UserInfo;
 import com.sushant.chitchatapp.repositories.UserRepository;
 import com.sushant.chitchatapp.security.JwtHelper;
 import com.sushant.chitchatapp.services.UserService;
@@ -40,14 +38,11 @@ public class UserServiceImpl implements UserService{
 
 
     @Override
-    public String userRegister(UserInfo userInfo) {
+    public String userRegister(User user) {
         String response = "";
         try{
-            User user = new User();
-            user.setEmail(userInfo.getEmail());
-            user.setName(userInfo.getName());
-            user.setPassword(passwordEncoder.encode(userInfo.getPassword()));
-            user.setMessages(new LinkedHashMap<Long, String>());
+            String password = user.getPassword();
+            user.setPassword(passwordEncoder.encode(password));
             repository.save(user);
             response = "success";
         }

@@ -1,4 +1,6 @@
-package com.sushant.chitchatapp.models;
+package com.sushant.messageConsumer.models;
+
+import java.util.UUID;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,8 +13,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class UserInfo {
+public class MessageData {
+
+    private String messageId = UUID.randomUUID().toString();
+    private String message;
     private String email;
-    private String name;
-    private String password;
 }

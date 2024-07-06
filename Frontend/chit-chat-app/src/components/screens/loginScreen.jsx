@@ -23,7 +23,7 @@ function LogInScreen(){
     return (
         <div>
             <Image />
-            <h2 style={{color:"#FFBD59"}}>LogIn User</h2>
+            <h2 style={{color:"#2196F3"}}>LogIn User</h2>
             <form>
                 <div style={{marginBottom: "20px"}}>
                     <label>Email</label><br/>

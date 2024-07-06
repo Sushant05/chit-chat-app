@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sushant.chitchatapp.models.JwtRequest;
 import com.sushant.chitchatapp.models.JwtResponse;
-import com.sushant.chitchatapp.models.UserInfo;
+import com.sushant.chitchatapp.models.User;
 import com.sushant.chitchatapp.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +20,10 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public String registerUser(@RequestBody UserInfo userInfo) {
+    public String registerUser(@RequestBody User user) {
         String response = "";
         try{
-            response = userService.userRegister(userInfo);
+            response = userService.userRegister(user);
         }
         catch(Exception e){
             System.out.println(e);

@@ -6,7 +6,7 @@ function LogoutButton(){
     const navigate = useNavigate();
 
     const logoutButtonStyle = {
-        color: "#FFBD59",
+        color: "#2196F3",
         backgroundColor: "white",
         fontWeight: "bold",
         fontSize: "20px",

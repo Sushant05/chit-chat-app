@@ -2,6 +2,8 @@ package com.sushant.chitchatapp.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sushant.chitchatapp.kafka.services.KafkaService;
 import com.sushant.chitchatapp.models.MessageData;
 import com.sushant.chitchatapp.services.MessageService;
 
@@ -22,11 +24,20 @@ public class MessageController {
     @Autowired
     private MessageService messageService;
 
+    @Autowired
+    private KafkaService kafkaService;
+
+    @Autowired
+    private ObjectMapper mapper;
+
     @PostMapping("/send")
     public String addMessage(@RequestBody MessageData messageData) {
         String response = "";
         try{
-            response = messageService.addMessage(messageData.getMessage(), messageData.getEmail());
+            //String message = "{messgae:" + messageData.getMessage() + ", email:" + messageData.getEmail()+ "}";
+            String message = mapper.writeValueAsString(messageData);
+            kafkaService.uploadMessage(message);
+            response = messageService.addMessage(messageData);
         }
         catch(Exception e){
             System.out.println(e);
@@ -38,7 +49,12 @@ public class MessageController {
     public List<MessageData> getAllMessages() {
         List<MessageData> list = new ArrayList<>();
         try{
-            list = messageService.getMessages();
+            list = messageService.fetchMessages();
+            if(list.size()==0){
+                System.out.println("list was empty initially");
+                list = messageService.getMessages();
+            }
+            
         }
         catch(Exception e){
             System.out.println(e);

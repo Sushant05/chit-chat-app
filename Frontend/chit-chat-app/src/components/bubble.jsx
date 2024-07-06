@@ -5,7 +5,7 @@ function Bubble(props){
     const bubbleStyle = {
         maxWidth: "15%",
         color: "#fff", 
-        backgroundColor: props.isLoggedInUser ? "#FFBD59" : "Grey", 
+        backgroundColor: props.isLoggedInUser ? "#4CAF50" : "#2196F3", 
         padding: "10px 15px", 
         borderRadius: props.isLoggedInUser ? "25px 25px 0 25px" :"0 25px 25px 25px", 
         marginBottom: "10px", 

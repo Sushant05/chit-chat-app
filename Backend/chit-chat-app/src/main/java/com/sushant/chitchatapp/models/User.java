@@ -1,7 +1,6 @@
 package com.sushant.chitchatapp.models;
 
 import java.util.Collection;
-import java.util.LinkedHashMap;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -26,7 +25,6 @@ public class User implements UserDetails{
     private String email;
     private String name;
     private String password;
-    private LinkedHashMap<Long, String> messages;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;

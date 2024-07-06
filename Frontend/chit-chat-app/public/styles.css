@@ -12,7 +12,7 @@
 
 input {
   background-color: white;
-  color : #FFBD59;
+  color : #2196F3;
   cursor: pointer;
   border: 0;
   border-radius: 4px;
@@ -20,7 +20,7 @@ input {
   margin: 0 10px;
   width: 300px;
   padding: 10px 0;
-  box-shadow: 0 0 5px #4a361f;
+  box-shadow: 0 0 5px #402679;
   transition: 0.4s;
 } 
 
@@ -29,7 +29,7 @@ label{
 }
 
 .navbar {
-  background-color : #FFBD59;
+  background-color :#2196F3;
   color: #fff; 
   padding: 10px 20px; 
   display: flex; 
@@ -71,6 +71,7 @@ label{
 
 input {
   padding: 5px;
+  color: black
 }
   
 .danger-text {

@@ -6,7 +6,7 @@ function SendButton(props){
     const[sent, isSent] = React.useState(false);
     console.log("props " + props);
     const buttonStyle = {
-        backgroundColor:  "#FFBD59",
+        backgroundColor:  "#2196F3",
         color : "white",
         cursor: "pointer",
         border: "none",

@@ -14,8 +14,8 @@ function LoginBtn(props){
     const [loggedInUser, setLoggedInUser] = React.useState("");
 
     const buttonStyle = {
-        backgroundColor: state ? "#FFBD59" : "white",
-        color : state ? "white" : "#FFBD59",
+        backgroundColor: state ? "#2196F3" : "white",
+        color : state ? "white" : "#2196F3",
         cursor: "pointer",
         border: "0",
         borderRadius: "4px",
@@ -24,7 +24,7 @@ function LoginBtn(props){
         margin: "0 10px",
         width: "300px",
         padding: "10px 0",
-        boxShadow: "0 0 5px #4a361f",
+        boxShadow: "0 0 5px #402679",
         transition: "0.4s"
     };
 
@@ -76,7 +76,7 @@ function LoginBtn(props){
 
     useEffect(()=>{
         if(signInResponse==="success"){
-            navigate('/login');
+           callLogIn(props.userDetails);
         }
     }, [signInResponse]);
 

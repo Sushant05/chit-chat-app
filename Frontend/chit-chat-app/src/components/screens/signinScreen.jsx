@@ -28,7 +28,7 @@ function SignInScreen(){
     return (
         <div>
             <Image/>
-            <h2 style={{color:"#FFBD59"}}>SignIn New User</h2>
+            <h2 style={{color:"#2196F3"}}>SignIn New User</h2>
             <form>
                 <div style={{marginBottom: "20px"}}>
                     <label>Name</label><br/>
